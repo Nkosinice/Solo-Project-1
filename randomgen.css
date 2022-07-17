@@ -60,6 +60,8 @@ margin-bottom: 12px;
 #gen {
     background-color: #ACA9BB;
     color: rgb(8, 8, 8);
+    border-color: #ACA9BB;
+    border-style: solid;
 }
 
 #line{
@@ -88,6 +90,8 @@ background-color: #28285a;
 font-weight: bold;
 border-radius: 3.5px;
 color:#44DEB8 ;
+border-color: #28285a;
+border-style: solid;
 }
 
 button:hover {
