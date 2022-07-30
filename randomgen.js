@@ -11,31 +11,40 @@ let pswrda = document.getElementById("b1")
 const pswrdb = document.getElementById("b2")
 const pswrdc = document.getElementById("b3")
 let val =[]
-let value = ""
+let valuea = ""
+let valueb = ""
+let valuec = ""
 
 function random () {
-  
-    value = ""
-    for(let i = 0 ; i < 11; i++){
+    
+    for(let i = 0 ; i < 14 + 1 ; i++){
       
-
-
-        value += characters[Math.floor(Math.random()*90)]
+        valuea += characters[Math.floor(Math.random()*90)]
+        valueb += characters[Math.floor(Math.random()*90)]
+        valuec += characters[Math.floor(Math.random()*90)]
 
     }
-    console.log(value)
-    val.push(value)
+    
 }
 
 genBtn.addEventListener('click', function () {
-    console.log("clicked")
     
+     random()
+     pswrda.textContent = valuea
+    
+     pswrdb.textContent = valueb
      
-     random()
-     pswrda.textContent = value
-     random()
-     pswrdb.textContent = value
-     random()
-     pswrdc.textContent = value
+     pswrdc.textContent = valuec
+
+     valuea = ""
+     valueb = ""
+     valuec = ""
 }
 )
+
+function copyText(val) {
+      
+    navigator.clipboard.writeText
+        (val)
+}
+
