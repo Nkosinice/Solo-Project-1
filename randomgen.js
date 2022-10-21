@@ -7,7 +7,7 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 
 const inputFld = document.getElementById("inpt")
 const genBtn = document.getElementById("gen")
-let pswrda = document.getElementById("b1")
+const pswrda = document.getElementById("b1")
 const pswrdb = document.getElementById("b2")
 const pswrdc = document.getElementById("b3")
 let val =[]
@@ -17,15 +17,22 @@ let valuec = ""
 
 function random () {
     
-    for(let i = 0 ; i < 14 + 1 ; i++){
+    if(inputFld.value < 14 && inputFld.value > 7){
+    for(let i = 0 ; i < inputFld.value  ; i++){
       
         valuea += characters[Math.floor(Math.random()*90)]
         valueb += characters[Math.floor(Math.random()*90)]
         valuec += characters[Math.floor(Math.random()*90)]
-
     }
-    
+    } else {
+        alert("Please input a number between 8 and 13")
+        valuea ="Password"
+        valueb ="Password"
+        valuec ="Password"
+    }
 }
+
+
 
 genBtn.addEventListener('click', function () {
     

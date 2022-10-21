@@ -3,7 +3,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
     font-size: 20px;
     padding-bottom: 500px;
@@ -48,10 +48,22 @@ margin-bottom: 12px;
 }
 
 #inpt{
+    outline: none;
     text-align: center;
-    height: 22px;
+    height: 2rem;
+    width: 4rem;
     border-radius: 3px;
+    border: 2px solid white;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 #generate{
     width: 100%;
     max-width: 200px;
@@ -62,12 +74,20 @@ margin-bottom: 12px;
     color: rgb(8, 8, 8);
     border-color: #ACA9BB;
     border-style: solid;
+    transition:.3s;
+}
+
+#gen:hover {
+    transition:.3s;
+    background-color: #28285a;
+    border: 2px solid #28285a;
+    color: #ACA9BB ;
 }
 
 #line{
     width: 87%;
     height: 2px;
-    background-color: #00BBBC;
+    background-color: #28285a;
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: -3px;
@@ -83,6 +103,7 @@ margin-bottom: 12px;
 }
 
 button {
+    transition: 0.4s;
 height: 28px;
 margin-top: 0px;
 width: 150px;
@@ -92,9 +113,11 @@ border-radius: 3.5px;
 color:#44DEB8 ;
 border-color: #28285a;
 border-style: solid;
+
 }
 
 button:hover {
+    border-color: #00BBBC;
 background: #00BBBC;
 color: #28285a;
 transition: 0.4s;
